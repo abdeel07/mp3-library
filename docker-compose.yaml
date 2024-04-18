@@ -1,0 +1,31 @@
+version: '3'
+services:
+  frontend:
+    build: ./frontend-v2
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - my_network
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    networks:
+      - my_network
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: music-app-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"
+    networks:
+      - my_network
+networks:
+  my_network:
