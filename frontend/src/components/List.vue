@@ -53,7 +53,7 @@
     }
     const deleteMusic =  async (id) =>{
         console.log("delete:",id);
-        axios.delete(`http://localhost:5000/music/${id}`)
+        axios.delete(`http://20.200.126.39:5000/music/${id}`)
         .then((response)=>{
             window.location.href = "/";
         })
@@ -64,7 +64,7 @@
     function addMusicToPlaylist(music_id,playlist_id){
       console.log(`Add Music ${music_id} to the Playlist: ${playlist_id}`);
       try {
-            axios.post(`http://localhost:5000/playlist/${playlist_id}/add_music`,{"music_id":music_id})
+            axios.post(`http://20.200.126.39:5000/playlist/${playlist_id}/add_music`,{"music_id":music_id})
             .then((response)=>{
               window.location.href = "/";
             })
@@ -78,7 +78,7 @@
     async function handleDisLike(id){
       console.log(`Dislike the music ${id}`);
       try {
-            const response = await fetch(`http://localhost:5000/music/${id}/remove_fav`,{method:"POST"});
+            const response = await fetch(`http://20.200.126.39:5000/music/${id}/remove_fav`,{method:"POST"});
             
             if (!response.ok) {
                 throw new Error('Failed to dislike the music');
@@ -91,7 +91,7 @@
 
     async function handleLike(id){
       try {
-            const response = await fetch(`http://localhost:5000/music/${id}/add_fav`,{method:"POST"});
+            const response = await fetch(`http://20.200.126.39:5000/music/${id}/add_fav`,{method:"POST"});
             
             if (!response.ok) {
                 throw new Error('Failed to like the music');

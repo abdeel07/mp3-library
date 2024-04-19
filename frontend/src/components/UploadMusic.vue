@@ -59,7 +59,7 @@ const submitForm = () => {
     data.append('image', formData.value.image);
     data.append('mp3_file', formData.value.mp3_file);
     data.append('user_id',localStorage.getItem("user_id"));
-    axios.post('http://localhost:5000/music', data) 
+    axios.post('http://20.200.126.39:5000/music', data) 
         .then(response => {
             console.log("Response: ",response.data);
             window.location.href = "/";

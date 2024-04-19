@@ -13,7 +13,7 @@ export const usePlaylistStore = defineStore("playlist", {
 
       try {
         const { data, pending, refresh } = await useFetch(
-          `http://localhost:5000/user/${loggedInUserInfo.user_id}/playlists`,
+          `http://20.200.126.39:5000/user/${loggedInUserInfo.user_id}/playlists`,
           {
             server: false,
           }
@@ -33,7 +33,7 @@ export const usePlaylistStore = defineStore("playlist", {
 
       try {
         const { data, pending } = await useFetch(
-          `http://localhost:5000/playlists/${loggedInUserInfo.user_id}/${id}`,
+          `http://20.200.126.39:5000/playlists/${loggedInUserInfo.user_id}/${id}`,
           {
             server: false,
           }
@@ -54,7 +54,7 @@ export const usePlaylistStore = defineStore("playlist", {
 
       try {
         const { data, pending } = await useFetch(
-          `http://localhost:5000/playlist/${id}/music`,
+          `http://20.200.126.39:5000/playlist/${id}/music`,
           {
             server: false,
           }

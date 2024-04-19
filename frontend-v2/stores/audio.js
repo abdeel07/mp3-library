@@ -22,7 +22,7 @@ export const useAudioStore = defineStore("audio", {
       const loggedInUserInfo = JSON.parse(localStorage.getItem("userData"));
 
       try {
-        const { data, pending, refresh } = await useFetch(`http://localhost:5000/user/${loggedInUserInfo.user_id}/music`, {
+        const { data, pending, refresh } = await useFetch(`http://20.200.126.39:5000/user/${loggedInUserInfo.user_id}/music`, {
           server: false,
         });
 

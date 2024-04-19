@@ -14,7 +14,7 @@ const onSubmit = async () => {
     console.log(playlistStore.playlistEditId);
     
     try {
-        const data = await $fetch(`http://localhost:5000/playlist/${playlistStore.playlistEditId}`, {
+        const data = await $fetch(`http://20.200.126.39:5000/playlist/${playlistStore.playlistEditId}`, {
           method: 'DELETE',
           headers: { 'Content-Type': 'application/json' },
       })

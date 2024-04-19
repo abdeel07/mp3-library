@@ -63,7 +63,7 @@
 
     const deletePlaylist =  async (id) =>{
         console.log("delete:",id);
-        axios.delete(`http://localhost:5000/playlist/${id}`)
+        axios.delete(`http://20.200.126.39:5000/playlist/${id}`)
         .then((response)=>{
             window.location.href = "/";
         })

@@ -23,7 +23,7 @@ const onSubmit = async () => {
     modalVisible.value = false;
 
     try {
-        const data = await $fetch(`http://localhost:5000/playlist/${selectedPlaylist.value}/${audioStore.audioEditId}`, {
+        const data = await $fetch(`http://20.200.126.39:5000/playlist/${selectedPlaylist.value}/${audioStore.audioEditId}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
         })

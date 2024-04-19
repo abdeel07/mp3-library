@@ -51,7 +51,7 @@
         data.append('image', formData.value.image);
         data.append('user_id',localStorage.getItem("user_id"));
 
-        axios.post('http://localhost:5000/playlist', data) 
+        axios.post('http://20.200.126.39:5000/playlist', data) 
             .then(response => {
                 console.log("Response: ",response.data);
                 window.location.href = "/";

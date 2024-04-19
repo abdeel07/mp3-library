@@ -1,7 +1,7 @@
-export const loginRoute = 'http://localhost:5000/login'
-export const registerRoute = 'http://localhost:5000/register'
-export const musicRoute = 'http://localhost:5000/music'
-export const playlistRoute = 'http://localhost:5000/playlist'
+export const loginRoute = 'http://20.200.126.39:5000/login'
+export const registerRoute = 'http://20.200.126.39:5000/register'
+export const musicRoute = 'http://20.200.126.39:5000/music'
+export const playlistRoute = 'http://20.200.126.39:5000/playlist'
 
 export { jwtDecode } from 'jwt-decode';
 

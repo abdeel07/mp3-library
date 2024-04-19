@@ -45,7 +45,7 @@
 
     async function fetchFavorits(){
         try {
-            const response = await fetch(`http://localhost:5000/user/${localStorage.getItem("user_id")}/favorits`);
+            const response = await fetch(`http://20.200.126.39:5000/user/${localStorage.getItem("user_id")}/favorits`);
             
             if (!response.ok) {
                 throw new Error('Failed to fetch playlists');
@@ -66,7 +66,7 @@
     }
     async function fetchPlaylists(){
         try {
-            const response = await fetch(`http://localhost:5000/user/${localStorage.getItem("user_id")}/playlists`);
+            const response = await fetch(`http://20.200.126.39:5000/user/${localStorage.getItem("user_id")}/playlists`);
             
             if (!response.ok) {
                 throw new Error('Failed to fetch playlists');
@@ -80,7 +80,7 @@
     }
     async function fetchUploads(){
         try {
-            const response = await fetch(`http://localhost:5000/user/${localStorage.getItem("user_id")}/music`);
+            const response = await fetch(`http://20.200.126.39:5000/user/${localStorage.getItem("user_id")}/music`);
             
             if (!response.ok) {
                 throw new Error('Failed to fetch uploads');
@@ -96,7 +96,7 @@
     async function fetchPlaylistById(playlist_id,name){
         console.log("fetch playlist by id: ",playlist_id);
         try {
-            const response = await fetch(`http://localhost:5000/playlist/${playlist_id}/music`)
+            const response = await fetch(`http://20.200.126.39:5000/playlist/${playlist_id}/music`)
             
             if (!response.ok) {
                 throw new Error('Failed to fetch playlist');

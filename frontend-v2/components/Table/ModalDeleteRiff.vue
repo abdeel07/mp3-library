@@ -14,7 +14,7 @@ const onSubmit = async () => {
     console.log(audioStore.audioEditId);
     
     try {
-        const data = await $fetch(`http://localhost:5000/music/${audioStore.audioEditId}`, {
+        const data = await $fetch(`http://20.200.126.39:5000/music/${audioStore.audioEditId}`, {
           method: 'DELETE',
           headers: { 'Content-Type': 'application/json' },
       })
